@@ -12,13 +12,15 @@ for i in f:
 	a=f.read(4)
 	if a==b'':
 		continue
-	a=binascii.hexlify(a)
-	a=int(a,16) 
+	#a=binascii.hexlify(a)
+	#a=int(a,16) 
 	bisect.insort(b,a)
 	
 
-f1=open(sys.argv[2],"w")
-f1.writelines(str(b))
+#f1=open(sys.argv[2],"w")
+#f1.writelines(str(b))
+f1=open(sys.argv[2],"wb")
+f1.writelines(b)
 
 f.close()
 f1.close()
